@@ -608,7 +608,18 @@
       "warning": "This action cannot be undone.",
       "cancel": "Cancel",
       "delete": "Delete"
-    }
+    },
+    "updateReport": "Update Report",
+    "updateStatus": "Update Status",
+    "remark": "Remark",
+    "comments": "Comments",
+    "commentsPlaceholder": "Add detailed comments about the report update...",
+    "uploadPhotos": "Upload Photos",
+    "optional": "Optional",
+    "chooseFiles": "Choose Files",
+    "noFileChosen": "No file chosen",
+    "completedMustBeOk": "Status 'COMPLETED' must use remark 'OK' only",
+    "okOnlyWithCompleted": "Remark 'OK' can only be used with status 'COMPLETED'"
   },
   "history": {
     "title": "Completed Report History",

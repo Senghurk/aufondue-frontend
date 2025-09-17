@@ -25,6 +25,7 @@
     "all": "All",
     "none": "None",
     "actions": "Actions",
+    "clear": "Clear",
     "status": "Status",
     "date": "Date",
     "time": "Time",
@@ -619,7 +620,10 @@
     "chooseFiles": "Choose Files",
     "noFileChosen": "No file chosen",
     "completedMustBeOk": "Status 'COMPLETED' must use remark 'OK' only",
-    "okOnlyWithCompleted": "Remark 'OK' can only be used with status 'COMPLETED'"
+    "okOnlyWithCompleted": "Remark 'OK' can only be used with status 'COMPLETED'",
+    "update": "Update",
+    "details": "Details",
+    "deleteReportButton": "Delete Report"
   },
   "history": {
     "title": "Completed Report History",

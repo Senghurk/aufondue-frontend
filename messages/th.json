@@ -26,6 +26,7 @@
     "none": "ไม่มี",
     "actions": "การดำเนินการ",
     "required": "จำเป็น",
+    "clear": "ล้าง",
     "status": "สถานะ",
     "date": "วันที่",
     "time": "เวลา",
@@ -483,7 +484,7 @@
         "location": "สถานที่",
         "reportedBy": "รายงานโดย",
         "dateReported": "วันที่รายงาน",
-        "mediaAttachments": "ไฟล์สื่อแนบ",
+        "mediaAttachments": "ไฟล์แนบ",
         "photo": "รูปภาพ {number}",
         "more": "เพิ่มเติม",
         "details": "รายละเอียด"
@@ -620,7 +621,10 @@
     "uploadPhotos": "อัปโหลดรูปภาพ",
     "optional": "ไม่บังคับ",
     "chooseFiles": "เลือกไฟล์",
-    "noFileChosen": "ไม่มีไฟล์ที่เลือก"
+    "noFileChosen": "ไม่มีไฟล์ที่เลือก",
+    "update": "อัปเดต",
+    "details": "รายละเอียด",
+    "deleteReportButton": "ลบรายงาน"
   },
   "history": {
     "title": "ประวัติรายงานที่เสร็จสิ้น",

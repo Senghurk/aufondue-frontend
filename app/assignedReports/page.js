@@ -629,9 +629,17 @@ export default function AssignedReportsPage() {
 
     const config = statusConfig[status] || statusConfig['PENDING'];
     
+    // Map status to translation key
+    let statusKey;
+    if (status === 'IN PROGRESS') {
+      statusKey = 'inProgress';
+    } else {
+      statusKey = status.toLowerCase();
+    }
+
     return (
       <Badge className={config.className} variant="outline">
-        {status}
+        {t(`assignedReports.status.${statusKey}`)}
       </Badge>
     );
   };
@@ -793,7 +801,10 @@ export default function AssignedReportsPage() {
                 {statusFilter && (
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800">
                     {t("common.status")}: {
-                      statusFilter === "IN_PROGRESS" ? t("assignedReports.status.inProgress") : statusFilter
+                      statusFilter === "IN_PROGRESS" ? t("assignedReports.status.inProgress") :
+                      statusFilter === "PENDING" ? t("assignedReports.status.pending") :
+                      statusFilter === "COMPLETED" ? t("assignedReports.status.completed") :
+                      statusFilter
                     }
                     <button
                       onClick={() => setStatusFilter("")}
@@ -913,7 +924,7 @@ export default function AssignedReportsPage() {
                             </div>
                             <div>
                               <p className="font-medium text-gray-900 dark:text-gray-100 text-sm">{formatDate(report.createdAt)}</p>
-                              <p className="text-gray-500 text-xs">Date reported</p>
+                              <p className="text-gray-500 text-xs">{t("reports.unassigned.reportCard.dateReported")}</p>
                             </div>
                           </div>
                         </div>
@@ -925,7 +936,7 @@ export default function AssignedReportsPage() {
                               <svg className="w-4 h-4 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                               </svg>
-                              <span className="text-sm font-semibold text-gray-700">Media Attachments</span>
+                              <span className="text-sm font-semibold text-gray-700">{t("reports.unassigned.reportCard.mediaAttachments")}</span>
                             </div>
                             <div className="flex gap-3 overflow-x-auto pb-2">
                               {/* Photos */}
@@ -990,7 +1001,7 @@ export default function AssignedReportsPage() {
                                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                   </svg>
-                                  Update
+                                  {t("assignedReports.update")}
                                 </div>
                               </button>
                               <button
@@ -1047,12 +1058,12 @@ export default function AssignedReportsPage() {
                     <div className="flex items-center gap-3">
                       <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">{category}</h2>
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-700 border border-green-200">
-                        {reports.length} {reports.length === 1 ? 'report' : 'reports'}
+                        {t('reports.unassigned.reportCount', { count: reports.length })}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-gray-600 font-medium">
-                        {collapsedCategories[category] ? 'Show' : 'Hide'}
+                        {collapsedCategories[category] ? t('common.show') : t('common.hide')}
                       </span>
                       <svg 
                         className={`w-5 h-5 text-gray-600 transition-transform duration-200 ${
@@ -1137,7 +1148,7 @@ export default function AssignedReportsPage() {
                                 </div>
                                 <div>
                                   <p className="font-medium text-gray-900 dark:text-gray-100 text-sm">{formatDate(report.createdAt)}</p>
-                                  <p className="text-gray-500 text-xs">Date reported</p>
+                                  <p className="text-gray-500 text-xs">{t("reports.unassigned.reportCard.dateReported")}</p>
                                 </div>
                               </div>
                             </div>
@@ -1149,7 +1160,7 @@ export default function AssignedReportsPage() {
                                   <svg className="w-4 h-4 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                   </svg>
-                                  <span className="text-sm font-semibold text-gray-700">Media Attachments</span>
+                                  <span className="text-sm font-semibold text-gray-700">{t("reports.unassigned.reportCard.mediaAttachments")}</span>
                                 </div>
                                 <div className="flex gap-3 overflow-x-auto pb-2">
                                   {/* Photos */}
@@ -1214,7 +1225,7 @@ export default function AssignedReportsPage() {
                                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                       </svg>
-                                      Update
+                                      {t("assignedReports.update")}
                                     </div>
                                   </button>
                                   <button
@@ -1225,7 +1236,7 @@ export default function AssignedReportsPage() {
                                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                                     </svg>
-                                    Details
+                                    {t("assignedReports.details")}
                                   </div>
                                 </button>
                               </div>
@@ -1240,7 +1251,7 @@ export default function AssignedReportsPage() {
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                     </svg>
-                                    Delete Report
+                                    {t("assignedReports.deleteReportButton")}
                                   </div>
                                 </button>
                               )}
@@ -1403,14 +1414,14 @@ export default function AssignedReportsPage() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                             </svg>
                           </div>
-                          Comments
+                          {t("assignedReports.comments")}
                         </label>
                         <textarea
                           value={comments}
                           onChange={(e) => setComments(e.target.value)}
                           rows={4}
                           className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-green-100 dark:focus:ring-green-900/20 focus:border-green-500 dark:focus:border-green-400 resize-none bg-white dark:bg-gray-800 shadow-sm transition-all duration-200 text-gray-900 dark:text-gray-100"
-                          placeholder="Add detailed comments about the report update..."
+                          placeholder={t("assignedReports.commentsPlaceholder")}
                         />
                       </div>
 
@@ -1422,7 +1433,7 @@ export default function AssignedReportsPage() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                           </div>
-                          Upload Photos <span className="text-gray-500 text-sm font-normal">(Optional)</span>
+                          {t("assignedReports.uploadPhotos")} <span className="text-gray-500 text-sm font-normal">({t("assignedReports.optional")})</span>
                         </label>
                         <div className="border-2 border-dashed border-purple-300 dark:border-purple-600 rounded-xl p-6 bg-white/50 dark:bg-gray-800/50 hover:bg-white/70 dark:hover:bg-gray-800/70 transition-colors duration-200">
                           <input

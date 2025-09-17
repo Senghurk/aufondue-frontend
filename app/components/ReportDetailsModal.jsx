@@ -51,7 +51,15 @@ export default function ReportDetailsModal({
                 report.status === 'COMPLETED' ? 'bg-green-500' :
                 'bg-gray-500'
               }`}></div>
-              {report.status}
+              {(() => {
+                let statusKey;
+                if (report.status === 'IN PROGRESS') {
+                  statusKey = 'inProgress';
+                } else {
+                  statusKey = report.status.toLowerCase();
+                }
+                return t(`reportDetails.status.${statusKey}`);
+              })()}
             </span>
           </div>
 

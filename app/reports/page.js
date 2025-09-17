@@ -633,7 +633,7 @@ export default function ReportsPage() {
                               <svg className="w-4 h-4 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                               </svg>
-                              <span className="text-sm font-semibold text-gray-700">Media Attachments</span>
+                              <span className="text-sm font-semibold text-gray-700">{t('reports.unassigned.reportCard.mediaAttachments')}</span>
                             </div>
                             <div className="flex gap-3 overflow-x-auto pb-2">
                               {/* Photos */}
@@ -777,7 +777,7 @@ export default function ReportsPage() {
           {/* Categorized Groups */}
       {Object.keys(groupedReports).length === 0 && recentReports.length === 0 ? (
         <div className="col-span-full text-center py-12">
-          <p className="text-gray-500 text-lg">No unassigned reports found.</p>
+          <p className="text-gray-500 text-lg">{t("reports.unassigned.noReports")}</p>
         </div>
       ) : (
         Object.entries(groupedReports)
@@ -791,12 +791,12 @@ export default function ReportsPage() {
               <div className="flex items-center gap-3">
                 <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">{category}</h2>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-700 border border-blue-200">
-                  {reports.length} {reports.length === 1 ? 'report' : 'reports'}
+                  {reports.length} {reports.length === 1 ? t('common.report') : t('common.reports')}
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-600 font-medium">
-                  {collapsedCategories[category] ? 'Show' : 'Hide'}
+                  {collapsedCategories[category] ? t('reports.unassigned.show') : t('reports.unassigned.hide')}
                 </span>
                 <svg 
                   className={`w-5 h-5 text-gray-600 transition-transform duration-200 ${
@@ -846,7 +846,7 @@ export default function ReportsPage() {
                         </div>
                         <div>
                           <p className="font-medium text-gray-900 dark:text-gray-100 text-sm">{report.customLocation}</p>
-                          <p className="text-gray-500 text-xs">Location</p>
+                          <p className="text-gray-500 text-xs">{t('reports.unassigned.location')}</p>
                         </div>
                       </div>
                       <div className="flex items-center text-sm">
@@ -857,7 +857,7 @@ export default function ReportsPage() {
                         </div>
                         <div>
                           <p className="font-medium text-gray-900 dark:text-gray-100 text-sm">{report.reportedBy?.username}</p>
-                          <p className="text-gray-500 text-xs">Reported by</p>
+                          <p className="text-gray-500 text-xs">{t('reports.unassigned.reportedBy')}</p>
                         </div>
                       </div>
                       <div className="flex items-center text-sm">
@@ -868,7 +868,7 @@ export default function ReportsPage() {
                         </div>
                         <div>
                           <p className="font-medium text-gray-900 dark:text-gray-100 text-sm">{formatDate(report.createdAt)}</p>
-                          <p className="text-gray-500 text-xs">Date reported</p>
+                          <p className="text-gray-500 text-xs">{t('reports.unassigned.reportCard.dateReported')}</p>
                         </div>
                       </div>
                     </div>
@@ -880,7 +880,7 @@ export default function ReportsPage() {
                           <svg className="w-4 h-4 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
-                          <span className="text-sm font-semibold text-gray-700">Media Attachments</span>
+                          <span className="text-sm font-semibold text-gray-700">{t('reports.unassigned.reportCard.mediaAttachments')}</span>
                         </div>
                         <div className="flex gap-3 overflow-x-auto pb-2">
                           {/* Photos */}
@@ -948,7 +948,7 @@ export default function ReportsPage() {
                       <div className="space-y-3">
                         <div>
                           <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                            Assign Staff Member
+                            {t('reports.unassigned.assignStaffMember')}
                           </label>
                           <div className="relative">
                             <select
@@ -958,7 +958,7 @@ export default function ReportsPage() {
                               }
                               className="w-full pl-4 pr-12 py-2.5 text-sm bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl shadow-sm appearance-none cursor-pointer transition-all duration-200 hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-md focus:outline-none focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900/20 focus:border-blue-500 dark:focus:border-blue-400 focus:bg-white dark:focus:bg-gray-800 text-gray-900 dark:text-gray-100"
                             >
-                              <option value="" className="text-gray-500">Choose a staff member...</option>
+                              <option value="" className="text-gray-500">{t('reports.unassigned.chooseStaffMember')}</option>
                           {staffMembers.map((staff) => (
                             <option key={staff.id} value={staff.id} className="py-2">
                               {staff.name}
@@ -989,14 +989,14 @@ export default function ReportsPage() {
                               {isAssigning[report.id] ? (
                                 <div className="flex items-center justify-center gap-2">
                                   <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                  Assigning...
+                                  {t('reports.unassigned.assigning')}
                                 </div>
                               ) : (
                                 <div className="flex items-center justify-center gap-2">
                                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                   </svg>
-                                  Assign
+                                  {t('reports.unassigned.assign')}
                                 </div>
                               )}
                             </button>
@@ -1008,7 +1008,7 @@ export default function ReportsPage() {
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                                 </svg>
-                                Details
+                                {t('reports.unassigned.details')}
                               </div>
                             </button>
                           </div>
@@ -1023,7 +1023,7 @@ export default function ReportsPage() {
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                 </svg>
-                                Delete Report
+                                {t('reports.unassigned.deleteReport')}
                               </div>
                             </button>
                           )}

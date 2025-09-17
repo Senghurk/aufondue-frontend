@@ -1058,7 +1058,7 @@ export default function AssignedReportsPage() {
                     <div className="flex items-center gap-3">
                       <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">{category}</h2>
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-700 border border-green-200">
-                        {t('reports.unassigned.reportCount', { count: reports.length })}
+                        {reports.length} {reports.length === 1 ? t('common.report') : t('common.reports')}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">

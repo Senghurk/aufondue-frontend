@@ -27,6 +27,8 @@
     "actions": "การดำเนินการ",
     "required": "จำเป็น",
     "clear": "ล้าง",
+    "report": "รายงาน",
+    "reports": "รายงาน",
     "status": "สถานะ",
     "date": "วันที่",
     "time": "เวลา",
@@ -478,6 +480,14 @@
       "latest": "ล่าสุด",
       "show": "แสดง",
       "hide": "ซ่อน",
+      "assign": "มอบหมาย",
+      "assigning": "กำลังมอบหมาย...",
+      "details": "รายละเอียด",
+      "deleteReport": "ลบรายงาน",
+      "assignStaffMember": "มอบหมายพนักงาน",
+      "chooseStaffMember": "เลือกพนักงาน...",
+      "location": "สถานที่",
+      "reportedBy": "รายงานโดย",
       "noReports": "ไม่พบรายงานที่ยังไม่ได้มอบหมาย",
       "reportCard": {
         "reportNumber": "รายงาน #{id}",
@@ -643,7 +653,7 @@
       "status": "สถานะ",
       "reportedDate": "วันที่รายงาน",
       "completionDate": "วันที่เสร็จสิ้น",
-      "duration": "ระยะเวลา"
+      "duration": "ระยะเวลาที่ใช้"
     },
     "status": {
       "completed": "เสร็จสิ้น"

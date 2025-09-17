@@ -1,0 +1,20 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Building -->
+  <g fill="#DD2222">
+    <!-- Roof -->
+    <path d="M40 80 L100 40 L160 80 L160 85 L40 85 Z"/>
+    <!-- Circle in roof -->
+    <circle cx="100" cy="70" r="8"/>
+    <!-- Columns -->
+    <rect x="50" y="85" width="20" height="80"/>
+    <rect x="90" y="85" width="20" height="80"/>
+    <rect x="130" y="85" width="20" height="80"/>
+    <!-- Base -->
+    <rect x="40" y="165" width="120" height="10"/>
+    <!-- Gear box -->
+    <rect x="130" y="120" width="40" height="40"/>
+    <!-- Gears -->
+    <path d="M150 130 L155 130 L155 135 L160 135 L160 140 L155 140 L155 145 L150 145 L150 140 L145 140 L145 135 L150 135 Z"/>
+    <path d="M140 135 L145 135 L145 140 L150 140 L150 145 L145 145 L145 150 L140 150 L140 145 L135 145 L135 140 L140 140 Z"/>
+  </g>
+</svg>

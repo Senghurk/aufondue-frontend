@@ -1,0 +1,1141 @@
+{
+  "common": {
+    "login": "Login",
+    "logout": "Logout",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Info",
+    "yes": "Yes",
+    "no": "No",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "select": "Select",
+    "all": "All",
+    "none": "None",
+    "actions": "Actions",
+    "status": "Status",
+    "date": "Date",
+    "time": "Time",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "language": "Language",
+    "print": "Print",
+    "download": "Download",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh",
+    "retry": "Retry",
+    "details": "Details",
+    "description": "Description",
+    "location": "Location",
+    "category": "Category",
+    "priority": "Priority",
+    "assignedTo": "Assigned To",
+    "reportedBy": "Reported By",
+    "dateReported": "Date Reported",
+    "completionDate": "Completion Date",
+    "duration": "Duration",
+    "more": "more",
+    "show": "Show",
+    "hide": "Hide",
+    "latest": "Latest",
+    "pending": "Pending",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "new": "New",
+    "old": "Old",
+    "active": "Active",
+    "inactive": "Inactive",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "on": "On",
+    "off": "Off",
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "settings": "Settings",
+    "profile": "Profile",
+    "help": "Help",
+    "about": "About",
+    "contactUs": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© 2024 Assumption University",
+    "allRightsReserved": "All rights reserved",
+    "notAssigned": "Not Assigned",
+    "version": "Version",
+    "systemInfo": "System Information",
+    "lastUpdated": "Last Updated",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At",
+    "deletedAt": "Deleted At",
+    "id": "ID",
+    "no": "No.",
+    "ok": "OK",
+    "pr": "PR",
+    "rf": "RF",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "average": "Average",
+    "minimum": "Minimum",
+    "maximum": "Maximum",
+    "count": "Count",
+    "percentage": "Percentage",
+    "amount": "Amount",
+    "quantity": "Quantity",
+    "unit": "Unit",
+    "price": "Price",
+    "cost": "Cost",
+    "value": "Value",
+    "result": "Result",
+    "outcome": "Outcome",
+    "note": "Note",
+    "notes": "Notes",
+    "comment": "Comment",
+    "comments": "Comments",
+    "remark": "Remark",
+    "remarks": "Remarks",
+    "attachment": "Attachment",
+    "attachments": "Attachments",
+    "file": "File",
+    "files": "Files",
+    "image": "Image",
+    "images": "Images",
+    "photo": "Photo",
+    "photos": "Photos",
+    "video": "Video",
+    "videos": "Videos",
+    "document": "Document",
+    "documents": "Documents",
+    "pdf": "PDF",
+    "excel": "Excel",
+    "word": "Word",
+    "powerpoint": "PowerPoint",
+    "zip": "ZIP",
+    "folder": "Folder",
+    "folders": "Folders",
+    "uploadedBy": "Uploaded By",
+    "uploadedAt": "Uploaded At",
+    "downloadedBy": "Downloaded By",
+    "downloadedAt": "Downloaded At",
+    "sharedWith": "Shared With",
+    "sharedBy": "Shared By",
+    "sharedAt": "Shared At",
+    "viewedBy": "Viewed By",
+    "viewedAt": "Viewed At",
+    "editedBy": "Edited By",
+    "editedAt": "Edited At",
+    "deletedBy": "Deleted By",
+    "approvedBy": "Approved By",
+    "approvedAt": "Approved At",
+    "rejectedBy": "Rejected By",
+    "rejectedAt": "Rejected At",
+    "preparedBy": "Prepared by",
+    "reviewedBy": "Reviewed by",
+    "page": "Page",
+    "of": "of",
+    "showing": "Showing",
+    "to": "to",
+    "entries": "entries",
+    "noDataFound": "No data found",
+    "noResultsFound": "No results found",
+    "searchPlaceholder": "Search...",
+    "selectOption": "Select an option",
+    "selectDate": "Select date",
+    "selectTime": "Select time",
+    "selectDateRange": "Select date range",
+    "from": "From",
+    "until": "Until",
+    "between": "Between",
+    "and": "and",
+    "or": "or",
+    "not": "Not",
+    "contains": "Contains",
+    "startsWith": "Starts with",
+    "endsWith": "Ends with",
+    "equals": "Equals",
+    "notEquals": "Not equals",
+    "greaterThan": "Greater than",
+    "lessThan": "Less than",
+    "greaterThanOrEqual": "Greater than or equal",
+    "lessThanOrEqual": "Less than or equal",
+    "isEmpty": "Is empty",
+    "isNotEmpty": "Is not empty",
+    "isNull": "Is null",
+    "isNotNull": "Is not null",
+    "sortBy": "Sort by",
+    "sortAscending": "Sort ascending",
+    "sortDescending": "Sort descending",
+    "groupBy": "Group by",
+    "filterBy": "Filter by",
+    "searchBy": "Search by",
+    "selectAll": "Select all",
+    "deselectAll": "Deselect all",
+    "invertSelection": "Invert selection",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "expandAll": "Expand all",
+    "collapseAll": "Collapse all",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "resetZoom": "Reset zoom",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "systemTheme": "System theme",
+    "language_en": "English",
+    "language_th": "Thai",
+    "switchLanguage": "Switch language",
+    "changeLanguage": "Change language",
+    "selectLanguage": "Select language",
+    "poweredBy": "Powered by",
+    "developedBy": "Developed by",
+    "maintainedBy": "Maintained by",
+    "supportedBy": "Supported by",
+    "securedBy": "Secured by",
+    "hostedBy": "Hosted by",
+    "readyToAccess": "Ready to access"
+  },
+  "landing": {
+    "title": "AU Fondue",
+    "nav": {
+      "features": "Features",
+      "about": "About",
+      "login": "Login"
+    },
+    "hero": {
+      "badge": "Campus Management Made Simple",
+      "title": "Streamline Your Campus Operations",
+      "subtitle": "Transform how your university handles maintenance reports. From instant issue tracking to advanced analytics, AU Fondue empowers your admin and staff to resolve campus issues faster than ever before.",
+      "cta": "Get Started",
+      "downloadApp": "Download",
+      "viewDemo": "View Demo"
+    },
+    "stats": {
+      "fasterResolution": "50% Faster Resolution Time",
+      "nextGen": "Next-Gen Campus Management",
+      "realTimeMonitoring": "24/7 Real-time Monitoring"
+    },
+    "whatIs": {
+      "title": "What is AU Fondue?",
+      "subtitle": "Powerful Campus Management",
+      "description": "AU Fondue is a comprehensive maintenance management system designed for Assumption University to streamline campus facility issue reporting and resolution."
+    },
+    "adminFeatures": {
+      "title": "For Administrators",
+      "subtitle": "Powerful Admin Features",
+      "description": "Everything you need to manage campus operations efficiently and effectively",
+      "reportOverview": {
+        "title": "Report Overview",
+        "description": "View all maintenance reports with real-time status updates and comprehensive filtering options."
+      },
+      "smartAssignment": {
+        "title": "Smart Task Assignment",
+        "description": "Intelligently assign issues to the most suitable maintenance staff based on expertise and availability."
+      },
+      "excelExport": {
+        "title": "Excel Report Export",
+        "description": "Download detailed reports and logs in Excel format for comprehensive record keeping and analysis."
+      },
+      "visualStats": {
+        "title": "Visual Stats & Charts",
+        "description": "Monitor trends and performance data through beautiful, interactive charts and dashboards."
+      },
+      "analytics": {
+        "title": "Performance Analytics",
+        "description": "Track staff performance, repair times, and efficiency metrics with detailed analytics and insights."
+      },
+      "notifications": {
+        "title": "Smart Notifications",
+        "description": "Receive instant alerts and notifications when reports are submitted, updated, or completed."
+      }
+    },
+    "userFeatures": {
+      "title": "For Students & Staff",
+      "subtitle": "Effortless User Experience",
+      "description": "Simple, intuitive tools that make reporting and tracking campus issues a breeze",
+      "fastReporting": {
+        "title": "Lightning-Fast Reporting",
+        "description": "Submit maintenance issues from your phone in under 30 seconds with our streamlined interface."
+      },
+      "liveTracking": {
+        "title": "Live Progress Tracking",
+        "description": "Get real-time updates on your report status and know exactly when issues are being resolved."
+      },
+      "history": {
+        "title": "Comprehensive History",
+        "description": "Access your complete report history and download detailed records whenever you need them."
+      },
+      "intuitiveDesign": {
+        "title": "Intuitive Design",
+        "description": "Beautifully crafted interface that's so simple, anyone can use it without training or tutorials."
+      }
+    },
+    "about": {
+      "title": "About AU Fondue",
+      "subtitle": "Our Story & Mission",
+      "tagline": "Empowering Assumption University with next-generation campus management solutions",
+      "description1": "Built for Assumption University",
+      "description2": "AU Fondue was created specifically to address the unique challenges faced by Assumption University's Operations & Maintenance department. Our comprehensive platform streamlines the entire maintenance workflow, from initial issue reporting to final resolution tracking.",
+      "description3": "By combining cutting-edge technology with deep understanding of campus operations, we've built a solution that not only improves efficiency but also enhances the overall campus experience for students, faculty, and staff.",
+      "innovationTitle": "Innovation First",
+      "innovationSubtitle": "Leveraging modern technology for campus excellence",
+      "stats": {
+        "yearDeveloped": "2024 Year Developed",
+        "auFocused": "100% AU Focused",
+        "support": "24/7 Support",
+        "possibilities": "∞ Possibilities"
+      },
+      "techStack": {
+        "title": "Our Technology Stack",
+        "subtitle": "Built with modern, reliable technologies to ensure scalability, security, and performance",
+        "frontend": "Frontend - Next.js & React",
+        "backend": "Backend - Spring Boot",
+        "database": "Database - PostgreSQL",
+        "cloud": "Cloud - Microsoft Azure"
+      },
+      "cta": {
+        "title": "Ready to Transform Your Campus?",
+        "subtitle": "Join us and try using AU Fondue today!",
+        "getStarted": "Get Started Today",
+        "downloadApp": "Download App"
+      }
+    },
+    "platforms": {
+      "webDashboard": {
+        "title": "Web Dashboard",
+        "subtitle": "FOR ADMINISTRATORS & OM STAFFS",
+        "description": "Manage reports, assign maintenance tasks, track progress, and generate analytics from your desktop browser"
+      },
+      "mobileApp": {
+        "title": "Mobile App",
+        "subtitle": "FOR EVERYONE WITH AU ACCOUNT",
+        "description": "Report issues instantly with photos, track repair status, and receive update from Admin & Staff",
+        "getItOn": "GET IT ON",
+        "googlePlay": "Google Play"
+      }
+    },
+    "features": {
+      "webDashboard": {
+        "badge": "Web Dashboard Features",
+        "description": "Access powerful management tools through our web dashboard. Perfect for administrators and maintenance supervisors on desktop computers."
+      },
+      "mobileApp": {
+        "badge": "Mobile App Features",
+        "description": "Available for everyone with an AU account. Report maintenance issues instantly from your Android phone. Download the app from Google Play Store to get started."
+      },
+      "dailyReports": {
+        "title": "Daily Maintenance Reports",
+        "description": "Comprehensive daily summaries of all maintenance activities, task completions, and pending issues."
+      }
+    },
+    "aboutAU": {
+      "builtForAU": "Built for AU",
+      "builtForAUDesc": "Exclusively designed and developed for Assumption University's campus maintenance needs"
+    },
+    "team": {
+      "title": "Meet Our Development Team",
+      "subtitle": "The team behind AU Fondue's development",
+      "developer1": "Sai Oan Hseng Hurk",
+      "developer2": "Min Thant Win",
+      "developer3": "Thaw Htut Soe",
+      "roles": {
+        "fullStack": "Full Stack Developer",
+        "frontend": "Frontend Developer",
+        "backend": "Backend Developer"
+      }
+    }
+  },
+  "login": {
+    "title": "AU Fondue",
+    "subtitle": "Maintenance Management System",
+    "chooseAccess": "Choose your access level to continue",
+    "admin": {
+      "title": "Administrator",
+      "subtitle": "Full system access & management",
+      "loginTitle": "Administrator Login",
+      "loginSubtitle": "Access the management dashboard",
+      "continueAs": "Continue as Administrator",
+      "loggingIn": "Logging in as Admin...",
+      "authenticating": "Authenticating your credentials",
+      "microsoftAuth": "Microsoft Authentication Required",
+      "microsoftDesc": "Sign in with your @au.edu Microsoft account. Only registered administrators can access the dashboard.",
+      "secureAccess": "Secure Access",
+      "enterpriseGrade": "Enterprise Grade"
+    },
+    "staff": {
+      "title": "OM Staff",
+      "subtitle": "Operational maintenance tasks",
+      "loginTitle": "Staff Login",
+      "loginSubtitle": "Access operational maintenance tasks",
+      "omId": "OM ID",
+      "omIdPlaceholder": "Enter your OM ID (e.g., OM01, OM12)",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "defaultPassword": "Default Password",
+      "defaultPasswordDesc": "For new staff members: OMstaff123",
+      "passwordChangeNote": "You will be forced to change password on first login",
+      "authNote": "Staff Authentication",
+      "authDesc": "Use your Staff ID (e.g., OM01, OM02) and password to login.",
+      "continueAs": "Continue as OM Staff",
+      "loggingIn": "Logging in as Staff...",
+      "verifying": "Verifying OM ID: {omId}",
+      "taskManagement": "Task Management",
+      "realTimeUpdates": "Real-time Updates"
+    },
+    "backToLogin": "Back to login options",
+    "securedBy": "Secured by enterprise-grade authentication",
+    "termsText": "By accessing this system, you agree to our Terms of Service and Privacy Policy",
+    "copyright": "Assumption University © 2024",
+    "messages": {
+      "loginSuccess": "Login Successful!",
+      "welcomeBack": "Welcome back, {name}!",
+      "signInCancelled": "Sign-in Cancelled",
+      "signInCancelledDesc": "Sign-in popup was closed. Please try again.",
+      "popupError": "Popup Error",
+      "popupErrorDesc": "Another sign-in popup is already open.",
+      "popupBlocked": "Popup Blocked",
+      "popupBlockedDesc": "Sign-in popup was blocked by your browser. Please allow popups for this site.",
+      "authFailed": "Authentication Failed",
+      "noEmail": "Could not retrieve email from Microsoft account",
+      "invalidDomain": "Invalid Email Domain",
+      "invalidDomainDesc": "Only @au.edu email addresses are allowed for administrators",
+      "accessDenied": "Access Denied",
+      "adminAuthFailed": "Admin authentication failed.",
+      "missingInfo": "Missing Information",
+      "enterStaffId": "Please enter your Staff ID.",
+      "enterPassword": "Please enter your password.",
+      "loginFailed": "Login Failed",
+      "staffLoginFailed": "Staff login failed.",
+      "securityAlert": "Security Alert",
+      "defaultPasswordInvalid": "Default password no longer valid!",
+      "passwordChanged": "Your password has been changed. Please use your new password to login.",
+      "securityReason": "For security reasons, the default password cannot be used after you've set a new password.",
+      "passwordChangeRequired": "Password Change Required",
+      "mustChangePassword": "You must change your password before continuing.",
+      "connectionError": "Connection Error",
+      "connectionErrorDesc": "Login failed: Unable to connect to server"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome, {name}",
+    "welcomeAdmin": "Welcome, Admin",
+    "subtitle": "Your comprehensive maintenance management dashboard",
+    "systemOnline": "System Online",
+    "loading": "Loading dashboard...",
+    "error": "Error loading dashboard data",
+    "errorDesc": "Failed to load dashboard data. Please try refreshing the page.",
+    "stats": {
+      "totalReports": "Total Reports",
+      "pendingAssignments": "Pending Assignments",
+      "incompleteTasks": "Incomplete Tasks",
+      "completedTasks": "Completed Tasks"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "subtitle": "Click any card to navigate",
+      "viewReports": "View All Reports",
+      "viewReportsDesc": "Explore and manage all submitted reports.",
+      "assignedReports": "Assigned Reports",
+      "assignedReportsDesc": "Monitor tasks assigned to team members.",
+      "viewHistory": "View History",
+      "viewHistoryDesc": "Access the history of completed reports.",
+      "readyToAccess": "Ready to access"
+    },
+    "charts": {
+      "reportsByCategory": "Reports by Category",
+      "categoriesCount": "{count} categories",
+      "reportsOverTime": "Reports Over Time",
+      "daysTracked": "{count} days tracked"
+    }
+  },
+  "reports": {
+    "unassigned": {
+      "title": "Unassigned Reports",
+      "loading": "Loading unassigned reports...",
+      "searchPlaceholder": "Search reports...",
+      "recentReports": "Recent Reports",
+      "reportCount": "{count} report(s)",
+      "latest": "Latest",
+      "show": "Show",
+      "hide": "Hide",
+      "noReports": "No unassigned reports found.",
+      "reportCard": {
+        "reportNumber": "Report #{id}",
+        "location": "Location",
+        "reportedBy": "Reported by",
+        "dateReported": "Date reported",
+        "mediaAttachments": "Media Attachments",
+        "photo": "Photo {number}",
+        "more": "more",
+        "details": "Details"
+      },
+      "assignment": {
+        "title": "Assign Staff Member",
+        "placeholder": "Choose a staff member...",
+        "assigning": "Assigning...",
+        "assign": "Assign",
+        "selectStaff": "Please select a staff member.",
+        "successMessage": "Report Assigned Successfully",
+        "failedMessage": "Failed to assign report"
+      },
+      "delete": {
+        "confirmTitle": "Confirm Delete",
+        "confirmMessage": "Are you sure you want to delete this report?",
+        "confirmWarning": "This action cannot be undone.",
+        "cancel": "Cancel",
+        "deleteButton": "Delete Report",
+        "deleting": "Deleting...",
+        "successMessage": "Report deleted successfully",
+        "failedMessage": "Failed to delete report"
+      },
+      "mediaViewer": {
+        "preview": "Preview",
+        "videoNotSupported": "Your browser does not support video playback."
+      },
+      "status": {
+        "pending": "PENDING",
+        "inProgress": "IN PROGRESS",
+        "completed": "COMPLETED",
+        "new": "NEW"
+      }
+    }
+  },
+  "dailyReport": {
+    "title": "Daily Maintenance Reports",
+    "pickDate": "Pick a date",
+    "print": "Print Report",
+    "downloadPdf": "Download PDF",
+    "loading": "Loading daily reports...",
+    "error": "Failed to load assigned reports. Please try again later.",
+    "noReports": "No Maintenance Reports",
+    "noReportsDesc": "There are no maintenance reports for {date}.",
+    "noReportsHint": "Reports will appear here once maintenance tasks are assigned to staff members.",
+    "printHeader": {
+      "title": "DAILY MAINTENANCE REPORTS",
+      "university": "Assumption University",
+      "department": "Dept: {department}",
+      "date": "Date: {date}",
+      "zone": "Zone 01"
+    },
+    "table": {
+      "no": "No.",
+      "reportId": "Report ID",
+      "assignedDateTime": "Assigned Date/Time",
+      "description": "Description",
+      "location": "Location",
+      "reportedBy": "Reported By",
+      "assignedTo": "Assigned To",
+      "resultStatus": "Result Status",
+      "ok": "OK",
+      "pr": "PR",
+      "rf": "RF"
+    },
+    "footer": {
+      "preparedBy": "Prepared by: __________",
+      "reviewedBy": "Reviewed by: __________",
+      "approvedBy": "Approved by: __________",
+      "page": "Page {current} of {total}",
+      "division": "Operations and Maintenance Division",
+      "head": "Head of Operations and Maintenance Division",
+      "formCode": "Form Code: FM-OM-AS-12",
+      "revision": "Revision: 1"
+    }
+  },
+  "assignedReports": {
+    "title": "Assigned Reports",
+    "subtitle": "Monitor and manage all assigned maintenance tasks",
+    "searchPlaceholder": "Search by description, location, or staff...",
+    "filterByStatus": "Filter by Status",
+    "allStatuses": "All Statuses",
+    "loading": "Loading assigned reports...",
+    "error": "Failed to load assigned reports",
+    "retry": "Retry",
+    "noReports": "No assigned reports found.",
+    "noReportsDesc": "Assigned reports will appear here once tasks are assigned to staff members.",
+    "reportCard": {
+      "reportNumber": "Report #{id}",
+      "assignedTo": "Assigned to",
+      "location": "Location",
+      "reportedBy": "Reported by",
+      "assignedOn": "Assigned on",
+      "description": "Description",
+      "category": "Category",
+      "priority": "Priority",
+      "viewDetails": "View Details",
+      "markComplete": "Mark as Complete",
+      "completing": "Completing...",
+      "deleteReport": "Delete Report",
+      "deleting": "Deleting..."
+    },
+    "status": {
+      "pending": "PENDING",
+      "inProgress": "IN PROGRESS",
+      "completed": "COMPLETED"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "urgent": "Urgent"
+    },
+    "messages": {
+      "completeSuccess": "Report marked as complete successfully",
+      "completeFailed": "Failed to update report status",
+      "deleteSuccess": "Report deleted successfully",
+      "deleteFailed": "Failed to delete report"
+    },
+    "deleteConfirm": {
+      "title": "Delete Report",
+      "message": "Are you sure you want to delete Report #{id}?",
+      "warning": "This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "history": {
+    "title": "Completed Report History",
+    "subtitle": "View the history of all completed reports.",
+    "exportExcel": "Export to Excel",
+    "loading": "Loading completed reports...",
+    "error": "Failed to fetch completed reports",
+    "retry": "Retry",
+    "noReports": "No completed reports found.",
+    "noReportsDesc": "Completed reports will appear here once tasks are finished.",
+    "table": {
+      "no": "#",
+      "description": "Description",
+      "category": "Category",
+      "assignedTo": "Assigned To",
+      "status": "Status",
+      "reportedDate": "Reported Date",
+      "completionDate": "Completion Date",
+      "duration": "Duration"
+    },
+    "status": {
+      "completed": "Completed"
+    }
+  },
+  "admins": {
+    "title": "Admin Management",
+    "subtitle": "Manage system administrators with AU accounts (@au.edu)",
+    "stats": {
+      "totalAdmins": "Total Admins",
+      "activeAdmins": "Active administrators"
+    },
+    "list": {
+      "title": "Administrator List",
+      "subtitle": "Manage administrators who have access to the system",
+      "addAdmin": "Add Admin",
+      "searchPlaceholder": "Search admins by name or email...",
+      "table": {
+        "no": "#",
+        "username": "Username",
+        "email": "Email",
+        "dateAdded": "Date Added",
+        "actions": "Actions"
+      }
+    },
+    "addDialog": {
+      "title": "Add New Administrator",
+      "subtitle": "Add a new administrator with an AU Microsoft account",
+      "emailLabel": "Admin Email *",
+      "emailPlaceholder": "username@au.edu",
+      "emailHint": "Email must be an @au.edu address",
+      "authTitle": "Microsoft Authentication",
+      "authDesc1": "The admin's display name will be automatically fetched from their Microsoft account when they first log in.",
+      "authDesc2": "Example: \"SAI OAN HSENG -\" for u6440041@au.edu",
+      "cancel": "Cancel",
+      "addButton": "Add Admin"
+    },
+    "messages": {
+      "missingInfo": "Missing Information",
+      "enterEmail": "Please enter the admin's email address",
+      "invalidEmail": "Invalid Email Format",
+      "addSuccess": "Admin Added Successfully",
+      "addSuccessDesc": "Admin with email {email} has been added",
+      "actionNotAllowed": "Action Not Allowed",
+      "cannotDeleteSelf": "You cannot delete your own administrator account while logged in.",
+      "deleteConfirmTitle": "Confirm Delete Admin",
+      "deleteConfirmMessage": "Are you sure you want to delete this administrator?",
+      "deleteConfirmWarning": "This action cannot be undone!",
+      "deleteSuccess": "Admin Deleted Successfully",
+      "deleteSuccessDesc": "{admin} has been removed from administrators",
+      "deleteWarning": "This action cannot be undone",
+      "deleteFailed": "Delete Failed",
+      "deleteFailedDesc": "Failed to delete admin"
+    },
+    "pagination": {
+      "showing": "Showing {start} to {end} of {total} admins",
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "staff": {
+    "title": "Staff Management",
+    "subtitle": "Manage staff accounts and reset passwords",
+    "stats": {
+      "totalStaff": "Total Staff",
+      "activeStaff": "Active staff members"
+    },
+    "list": {
+      "title": "Staff Members",
+      "subtitle": "Manage staff members who handle maintenance reports",
+      "addStaff": "Add Staff",
+      "searchPlaceholder": "Search staff by name, email, or OM ID...",
+      "table": {
+        "no": "#",
+        "omId": "OM ID",
+        "name": "Name",
+        "email": "Email",
+        "dateAdded": "Date Added",
+        "actions": "Actions"
+      }
+    },
+    "addDialog": {
+      "title": "Add New Staff Member",
+      "subtitle": "Enter the details for the new staff member. Default password is OMstaff123.",
+      "omIdLabel": "OM ID *",
+      "omIdPlaceholder": "e.g., OM01",
+      "nameLabel": "Full Name *",
+      "namePlaceholder": "Enter staff member's full name",
+      "emailLabel": "Email Address *",
+      "emailPlaceholder": "Enter email address",
+      "note": "Note: The staff member will need to change their password on first login.",
+      "cancel": "Cancel",
+      "addButton": "Add Staff Member"
+    },
+    "resetPassword": {
+      "title": "Reset Staff Password",
+      "message": "Are you sure you want to reset the password for {name}?",
+      "emailInfo": "A password reset link will be sent to:",
+      "instructions": "The staff member will receive an email with instructions to create a new password.",
+      "cancel": "Cancel",
+      "sendButton": "Send Reset Link",
+      "sending": "Sending...",
+      "successTitle": "Password Reset Email Sent",
+      "successMessage": "Reset link sent to {email}",
+      "successNote": "The link will expire in 1 hour",
+      "failedTitle": "Password Reset Failed"
+    },
+    "rename": {
+      "title": "Rename Staff Member",
+      "subtitle": "Change the name for {name}",
+      "newNameLabel": "New Name",
+      "newNamePlaceholder": "Enter new name",
+      "omIdInfo": "OM ID: {id} (will not change)",
+      "note": "Note: The staff member's name will be updated across all reports and records.",
+      "cancel": "Cancel",
+      "updateButton": "Update Name",
+      "updating": "Updating...",
+      "successTitle": "Name Updated",
+      "successMessage": "Staff name changed from \"{oldName}\" to \"{newName}\""
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "message": "Are you sure you want to delete this staff member?",
+      "nameLabel": "Name:",
+      "omIdLabel": "OM ID:",
+      "emailLabel": "Email:",
+      "warning": "Warning: This action cannot be undone. All data associated with this staff member will be permanently deleted.",
+      "cancel": "Cancel",
+      "deleteButton": "Delete Staff Member",
+      "deleting": "Deleting...",
+      "cannotDeleteTitle": "Cannot Delete Staff Member",
+      "cannotDeleteMessage": "{name} has {count} incomplete assigned report(s). All reports must be marked as 'Completed' before deletion."
+    },
+    "messages": {
+      "missingInfo": "Missing Information",
+      "fillRequired": "Please fill in all required fields",
+      "validationError": "Validation Error",
+      "fixErrors": "Please fix the validation errors before submitting",
+      "addSuccess": "Staff Member Added",
+      "addSuccessDesc": "{name} has been added successfully",
+      "duplicateOmId": "Duplicate OM ID",
+      "duplicateEmail": "Duplicate Email",
+      "addFailed": "Failed to Add Staff",
+      "addFailedDesc": "Could not add staff member",
+      "deleteSuccess": "Staff Member Deleted",
+      "deleteSuccessDesc": "{name} has been removed from the system",
+      "deleteFailed": "Deletion Failed",
+      "deleteFailedDesc": "Failed to delete staff member. Please try again.",
+      "omIdExists": "OM ID '{id}' is already exist in the system"
+    },
+    "pagination": {
+      "showing": "Showing {start} to {end} of {total} staff members",
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "userList": {
+    "title": "Staff List",
+    "subtitle": "View and manage all staff in the system.",
+    "searchPlaceholder": "Search staff by name, ID, or email...",
+    "addStaff": "Add Staff",
+    "table": {
+      "id": "ID",
+      "name": "Name",
+      "email": "Email",
+      "addedOn": "Added On",
+      "resetPassword": "Reset Password",
+      "delete": "Delete"
+    },
+    "addDialog": {
+      "title": "Add New Staff",
+      "idLabel": "Staff ID *",
+      "idPlaceholder": "Enter Staff ID (e.g., OM1, OM12, OM123)",
+      "idHint": "Format: OM + number (e.g., OM1, OM12, OM123)",
+      "nameLabel": "Full Name *",
+      "namePlaceholder": "Enter full name",
+      "emailLabel": "Email Address *",
+      "emailPlaceholder": "Enter email address (e.g., user@gmail.com, name@company.com)",
+      "emailHint": "Accepts any valid email provider (Gmail, Outlook, Yahoo, corporate emails, etc.)",
+      "dateLabel": "Added On *",
+      "datePlaceholder": "Select today's date",
+      "dateHint": "You can only select today's date",
+      "cancel": "Cancel",
+      "addButton": "Add Staff"
+    },
+    "deleteDialog": {
+      "title": "Delete Staff Member",
+      "message": "Are you sure you want to delete {name} ({id})?",
+      "warning": "This action cannot be undone.",
+      "cancel": "Cancel",
+      "deleteButton": "Delete"
+    },
+    "messages": {
+      "noStaff": "No staff found.",
+      "idExists": "This Staff ID already exists. Please use a different ID.",
+      "invalidDate": "Invalid date. Please select today's date only.",
+      "resetPasswordSent": "Reset password request sent to {email} for {name} ({id})"
+    },
+    "pagination": {
+      "showing": "Showing {start} to {end} of {total} staff members",
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "orderMaterial": {
+    "title": "Order Material",
+    "printForm": "Print Form",
+    "formTitle": "Equipment Repair Request Form",
+    "form": {
+      "no": "No.",
+      "dateTime": "Date & Time:",
+      "currentTime": "(Current time)",
+      "equipmentCode": "Equipment Code:",
+      "equipmentCodePlaceholder": "Eg. Z99GOWT010103",
+      "system": "System:",
+      "systemPlaceholder": "Eg. Sanitary",
+      "department": "Department:",
+      "printedBy": "Printed by:",
+      "equipmentName": "Equipment Name:",
+      "equipmentNamePlaceholder": "Eg. Submersible sewage pump, outside the building at Thaweep Bridge, outbound side (front guardhouse)",
+      "location": "Location:",
+      "locationPlaceholder": "Eg. Level G0, outside the building, Thaweep Wittaya Bridge, outbound side",
+      "detailsProblem": "Details/Problem:",
+      "detailsProblemPlaceholder": "Eg. Pump not operating",
+      "cause": "Cause:",
+      "causePlaceholder": "Eg. Pump grounded",
+      "remarks": "Remarks:",
+      "rf": "RF",
+      "assetCode": "Asset Code:",
+      "reportedBy": "Reported by:",
+      "reportedByPlaceholder": "Eg. Mr. Thanatip",
+      "recordedBy": "Recorded by:"
+    },
+    "imageUpload": {
+      "title": "Attach Images",
+      "count": "{current}/{max} images",
+      "clickToUpload": "Click to upload images",
+      "slotsRemaining": "{count} slot(s) remaining • PNG, JPG, JPEG (max 10MB)",
+      "maxReached": "Maximum images reached",
+      "slot": "Slot {number}",
+      "empty": "Empty"
+    },
+    "uploadMessages": {
+      "rejectedTitle": "Upload Rejected - Maximum Images Exceeded",
+      "rejectedMessage1": "Cannot upload {count} image(s). You can only attach up to 4 images total.",
+      "rejectedMessage2": "You currently have {count} image(s) attached.",
+      "rejectedMessage3": "You can only add {count} more image(s).",
+      "rejectedMessage4": "Please remove existing images before adding new ones.",
+      "successTitle": "Images Attached Successfully",
+      "successMessage1": "{count} image(s) have been attached successfully.",
+      "successMessage2": "You can still add {count} more image(s).",
+      "successMessage3": "You have reached the maximum limit."
+    },
+    "imageViewer": {
+      "fileName": "{filename}",
+      "zoom": "{zoom}%",
+      "zoomOut": "Zoom Out",
+      "zoomIn": "Zoom In",
+      "download": "Download",
+      "close": "Close"
+    },
+    "footer": {
+      "division": "Operations and Maintenance Division",
+      "preparedOn": "Prepared on: {date}",
+      "effectiveDate": "Effective Date: {date}",
+      "revision": "Revision: 1",
+      "head": "Head of Operations and Maintenance Division",
+      "formCode": "Form Code: FM-OM-AS-12"
+    },
+    "print": {
+      "attachImages": "Attach Images (Maximum 4 images)",
+      "noImage": "No Image",
+      "image1": "Image 1",
+      "image2": "Image 2",
+      "image3": "Image 3",
+      "image4": "Image 4"
+    }
+  },
+  "generalSettings": {
+    "title": "General Settings",
+    "testNotifications": {
+      "title": "Test Push Notifications",
+      "emailLabel": "User Email",
+      "emailPlaceholder": "user@student.au.edu",
+      "messageLabel": "Test Message",
+      "messageDefault": "This is a test notification from AU Fondue Admin Dashboard",
+      "sendButton": "Send Test Notification",
+      "sending": "Sending...",
+      "instructions": {
+        "title": "Instructions:",
+        "line1": "• Enter the email of a user who has the mobile app installed",
+        "line2": "• The user must have opened the app at least once to register their FCM token",
+        "line3": "• The notification will appear on their mobile device",
+        "line4": "• Make sure the user has notifications enabled for the AU Fondue app"
+      }
+    },
+    "notificationSettings": {
+      "title": "Notification Settings",
+      "enablePush": "Enable Push Notifications",
+      "notifyWhen": "Notify users when:",
+      "statusChanges": "Issue status changes",
+      "newComments": "New comments are added",
+      "issuesCompleted": "Issues are completed"
+    },
+    "systemInfo": {
+      "title": "System Information",
+      "backendUrl": "Backend URL:",
+      "notificationService": "Notification Service:",
+      "firebase": "Firebase Cloud Messaging",
+      "lastUpdated": "Last Updated:",
+      "version": "Version:",
+      "versionNumber": "v1.0.0"
+    },
+    "messages": {
+      "enterEmail": "Please enter an email address",
+      "testSent": "Test notification sent successfully! 📱",
+      "testFailed": "Failed to send test notification",
+      "networkError": "Network error occurred"
+    }
+  },
+  "notificationSettings": {
+    "title": "Notification Settings",
+    "subtitle": "Manage how you receive notifications about reports.",
+    "emailNotifications": "Email Notifications",
+    "smsNotifications": "SMS Notifications"
+  },
+  "changePassword": {
+    "title": "Password Change Required",
+    "subtitle": "For security reasons, you must change your password before continuing",
+    "alert": {
+      "title": "First Time Login Detected",
+      "message": "You are using the default password. Please create a new secure password to protect your account."
+    },
+    "form": {
+      "currentPassword": "Current Password",
+      "currentPasswordPlaceholder": "Enter current password",
+      "currentPasswordHint": "Default: OMstaff123",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Enter new password",
+      "confirmPassword": "Confirm New Password",
+      "confirmPasswordPlaceholder": "Confirm new password"
+    },
+    "requirements": {
+      "title": "Password Requirements:",
+      "length": "• At least 8 characters",
+      "uppercase": "• One uppercase letter",
+      "lowercase": "• One lowercase letter",
+      "number": "• One number"
+    },
+    "buttons": {
+      "changePassword": "Change Password",
+      "changing": "Changing Password..."
+    },
+    "messages": {
+      "cannotSkip": "You cannot skip this step. You must change your password to continue.",
+      "successTitle": "Password Changed Successfully",
+      "successMessage": "Your password has been updated. Redirecting to your dashboard...",
+      "failedTitle": "Password Change Failed",
+      "incorrectCurrent": "Current password is incorrect"
+    },
+    "validation": {
+      "currentRequired": "Current password is required",
+      "newRequired": "New password is required",
+      "confirmRequired": "Please confirm your password",
+      "passwordsMismatch": "Passwords do not match",
+      "sameasCurrent": "New password must be different from current password",
+      "requirements": "At least 8 characters, One uppercase letter, One lowercase letter, One number"
+    }
+  },
+  "resetPassword": {
+    "title": "Reset Your Password",
+    "verifying": "Verifying reset link...",
+    "createNew": "Create a new password for {email}",
+    "instructions": {
+      "title": "Password Reset Instructions",
+      "subtitle": "Please use the link from your email",
+      "description": "The password reset email contains a secure link that will take you to Firebase's password reset page.",
+      "howTo": "How to reset your password:",
+      "step1": "1. Check your email for the password reset message",
+      "step2": "2. Click the link in the email (it will open Firebase's secure reset page)",
+      "step3": "3. Enter your new password on Firebase's page",
+      "step4": "4. Return to the login page to sign in with your new password",
+      "backToLogin": "Back to Login"
+    },
+    "form": {
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Enter new password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm new password"
+    },
+    "requirements": {
+      "title": "Password Requirements:",
+      "length": "• At least 8 characters",
+      "uppercase": "• One uppercase letter",
+      "lowercase": "• One lowercase letter",
+      "number": "• One number"
+    },
+    "buttons": {
+      "resetPassword": "Reset Password",
+      "resetting": "Resetting Password...",
+      "backToLogin": "Back to Login",
+      "loading": "Loading..."
+    },
+    "messages": {
+      "successTitle": "Password Reset Successful",
+      "successMessage": "Your password has been reset successfully. Please login with your new password.",
+      "failedTitle": "Password Reset Failed"
+    },
+    "errors": {
+      "invalidLink": "Invalid Reset Link",
+      "missingCode": "Missing reset code. Please use the link from your email.",
+      "invalidCode": "This password reset link is invalid or has expired.",
+      "expired": "This password reset link has expired. Please request a new one.",
+      "invalid": "Invalid password reset link. Please request a new one.",
+      "weakPassword": "Password is too weak. Please choose a stronger password.",
+      "genericError": "Failed to reset password. Please try again."
+    },
+    "validation": {
+      "newRequired": "New password is required",
+      "confirmRequired": "Please confirm your password",
+      "passwordsMismatch": "Passwords do not match",
+      "minLength": "Password must be at least 8 characters long",
+      "needUppercase": "Password must contain at least one uppercase letter",
+      "needLowercase": "Password must contain at least one lowercase letter",
+      "needNumber": "Password must contain at least one number"
+    }
+  },
+  "signup": {
+    "title": "Sign Up",
+    "fullName": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "showPassword": "Show Password",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account? Log in",
+    "notAllowed": "You are not allowed to sign up.",
+    "success": "Account created successfully! Please log in.",
+    "failed": "Signup failed: {error}"
+  },
+  "sidebar": {
+    "reports": "Reports",
+    "unassignedReports": "Unassigned Reports",
+    "assignedReports": "Assigned Reports",
+    "allReports": "All Reports",
+    "adminManagement": "Admin Management",
+    "staffManagement": "Staff Management",
+    "home": "Home",
+    "dailyReports": "Daily Reports",
+    "orderMaterial": "Order Material",
+    "history": "History"
+  },
+  "topbar": {
+    "auFondueStaff": "Staff",
+    "auFondueAdmin": "Admin",
+    "dashboard": "Dashboard",
+    "home": "Home",
+    "users": "Users",
+    "user": "User",
+    "logout": "Logout"
+  },
+  "reportDetails": {
+    "title": "Report Details",
+    "issueNumber": "Issue #{id}",
+    "status": {
+      "pending": "PENDING",
+      "inProgress": "IN PROGRESS",
+      "completed": "COMPLETED"
+    },
+    "fields": {
+      "description": "Description",
+      "category": "Category",
+      "location": "Location",
+      "reportedBy": "Reported By",
+      "assignedTo": "Assigned To",
+      "reportedAt": "Reported At"
+    },
+    "updateHistory": "Update History",
+    "statusUpdate": "Status: {status}",
+    "media": {
+      "photos": "Photos ({count})",
+      "videos": "Videos ({count})",
+      "noMedia": "No media attached",
+      "noMediaDesc": "This report doesn't contain any photos or videos"
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email",
+    "minLength": "Minimum {min} characters required",
+    "maxLength": "Maximum {max} characters allowed",
+    "passwordMatch": "Passwords do not match",
+    "invalidFormat": "Invalid format",
+    "numberOnly": "Numbers only",
+    "lettersOnly": "Letters only",
+    "alphanumeric": "Letters and numbers only",
+    "url": "Please enter a valid URL",
+    "phoneNumber": "Please enter a valid phone number",
+    "dateFormat": "Please enter a valid date",
+    "timeFormat": "Please enter a valid time",
+    "min": "Minimum value is {min}",
+    "max": "Maximum value is {max}",
+    "between": "Value must be between {min} and {max}",
+    "unique": "This value already exists",
+    "confirmed": "Confirmation does not match",
+    "accepted": "You must accept this",
+    "regex": "Invalid format",
+    "fileSize": "File size must not exceed {size}",
+    "fileType": "Invalid file type",
+    "dimensions": "Invalid dimensions"
+  }
+}

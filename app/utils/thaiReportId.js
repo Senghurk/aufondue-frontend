@@ -1,25 +1,24 @@
 /**
  * Convert a date and report index to Thai Buddhist Era report ID format
- * Format: SE[YY][MM][DD][###]
+ * Format: SE[YY][MM][####] - Monthly reset, no day included
  * @param {Date} date - The report date
- * @param {number} index - The report index for that day (starting from 1)
+ * @param {number} index - The report index for that month (starting from 1)
  * @returns {string} Thai-formatted report ID
  */
 export function generateThaiReportId(date, index) {
   // Convert to Thai Buddhist Era (BE = Gregorian + 543)
   const thaiYear = date.getFullYear() + 543;
-  
+
   // Get last 2 digits of Thai year
   const yearShort = String(thaiYear).slice(-2);
-  
-  // Format month and day with leading zeros
+
+  // Format month with leading zeros
   const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  
-  // Format index with 3 digits
-  const counter = String(index).padStart(3, '0');
-  
-  return `SE${yearShort}${month}${day}${counter}`;
+
+  // Format index with 4 digits (monthly counter)
+  const counter = String(index).padStart(4, '0');
+
+  return `SE${yearShort}${month}${counter}`;
 }
 
 /**

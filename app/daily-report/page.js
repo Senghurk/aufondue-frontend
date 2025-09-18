@@ -36,14 +36,20 @@ export default function DailyReportsPage() {
   const [loading, setLoading] = useState(false);
   const [rows, setRows] = useState([]);
   const [error, setError] = useState("");
-  const [zone, setZone] = useState("Zone 01");
-  const [department, setDepartment] = useState("Maintenance Department");
+  const [zone, setZone] = useState("");
+  const [department, setDepartment] = useState("");
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   
   // Today at midnight for comparison
   const today = startOfToday();
   const tomorrow = new Date(today);
   tomorrow.setDate(tomorrow.getDate() + 1);
+
+  // Initialize zone and department with translations
+  useEffect(() => {
+    setZone(t("dailyReport.zone"));
+    setDepartment(t("dailyReport.department"));
+  }, [t]);
 
   // Handle date selection
   const handleDateSelect = (newDate) => {
@@ -65,53 +71,84 @@ export default function DailyReportsPage() {
           `${backendUrl}/issues/assigned?page=0&size=1000`
         );
 
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
         const data = await res.json();
 
-        // Filter reports that were created/reported on the selected date
         const selectedDateStart = startOfDay(new Date(date));
         const selectedDateEnd = endOfDay(new Date(date));
+        const thirtyDaysAgo = new Date(selectedDateStart);
+        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
 
-        let filteredReports = (Array.isArray(data) ? data : []).filter(r => {
-          // Check if the report was created on the selected date
-          // Since we don't have assignedAt field, we use createdAt for daily reports
+        // Get current month and year for ID generation
+        const currentMonth = selectedDateStart.getMonth() + 1;
+        const currentYear = selectedDateStart.getFullYear();
+
+        // Separate today's reports and RF/PR reports from last 30 days
+        let todaysReports = [];
+        let carryOverReports = [];
+
+        (Array.isArray(data) ? data : []).forEach(r => {
           if (r.createdAt) {
             const reportDate = new Date(r.createdAt);
-            return reportDate >= selectedDateStart && reportDate <= selectedDateEnd;
+
+            // Today's reports
+            if (reportDate >= selectedDateStart && reportDate <= selectedDateEnd) {
+              todaysReports.push(r);
+            }
+            // RF/PR reports from last 30 days (excluding today)
+            else if ((r.remarkType === 'RF' || r.remarkType === 'PR') &&
+                     reportDate >= thirtyDaysAgo &&
+                     reportDate < selectedDateStart) {
+              carryOverReports.push(r);
+            }
           }
-          return false;
         });
 
-        let mapped = filteredReports.map((r, i) => ({
-          no: i + 1,
-          id: r.id ?? i + 1,
-          thaiReportId: generateThaiReportId(new Date(r.createdAt || date), i + 1),
-          reportedTime: r.createdAt
-            ? format(new Date(r.createdAt), "dd/MM/yyyy HH:mm")
-            : "-",
-          location: r.customLocation || r.location || "-",
-          problem: r.description || "-",
-          requester: r.reportedBy?.username || "-",
-          supervisor: r.assignedTo?.staffId || r.assignedTo?.name || "-",
-          status: r.status || "-",
-          category: r.category || "-",
-          remarkType: r.remarkType || "",
-          priority: r.priority || "",
-          // Determine resolution status
-          isOK: r.status === "COMPLETED" && (r.remarkType === "OK" || !r.remarkType),
-          isPR: r.remarkType === "PR",
-          isRF: r.remarkType === "RF",
-          // Only show if assigned
-          assigned: r.assigned === true && r.assignedTo != null,
-        }));
+        // Sort carry-over reports by date (most recent first)
+        carryOverReports.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+        // Combine: carry-over RF/PR first, then today's reports
+        const allReports = [...carryOverReports, ...todaysReports];
+
+        // Map reports with sequential numbering for the month
+        let reportCounter = 1;
+        let mapped = allReports.map((r) => {
+          const reportNum = reportCounter++;
+          return {
+            no: reportNum,
+            id: r.id ?? reportNum,
+            thaiReportId: generateThaiReportId(new Date(date), reportNum),
+            reportedTime: r.createdAt
+              ? format(new Date(r.createdAt), "dd/MM/yyyy HH:mm")
+              : "-",
+            isCarryOver: carryOverReports.includes(r), // Mark if it's a carry-over report
+            location: r.customLocation || r.location || "-",
+            problem: r.description || "-",
+            requester: r.reportedBy?.username || "-",
+            supervisor: r.assignedTo?.staffId || r.assignedTo?.name || "-",
+            status: r.status || "-",
+            category: r.category || "-",
+            remarkType: r.remarkType || "",
+            priority: r.priority || "",
+            // Determine resolution status
+            isOK: r.status === "COMPLETED" && (r.remarkType === "OK" || !r.remarkType),
+            isPR: r.remarkType === "PR",
+            isRF: r.remarkType === "RF",
+            // Only show if assigned
+            assigned: r.assigned === true && r.assignedTo != null,
+          };
+        });
 
         // Only show assigned reports
         mapped = mapped.filter(r => r.supervisor && r.supervisor !== "-");
 
         setRows(mapped);
       } catch (e) {
-        console.error(e);
-        setError(t("dailyReport.error"));
+        console.error('Error fetching daily reports:', e);
+        console.error('Error details:', e.message);
+        setError("Failed to load assigned reports. Please try again later.");
         setRows([]);
       } finally {
         setLoading(false);
@@ -125,7 +162,7 @@ export default function DailyReportsPage() {
     () => [
       { key: "no", label: t("dailyReport.table.no"), width: "w-10" },
       { key: "id", label: t("dailyReport.table.reportId"), width: "w-16" },
-      { key: "reportedTime", label: "Assigned Date/Time", width: "w-32" },
+      { key: "reportedTime", label: t("dailyReport.table.assignedDateTime"), width: "w-32" },
       { key: "problem", label: t("dailyReport.table.description"), width: "w-64" },
       { key: "location", label: t("dailyReport.table.location"), width: "w-40" },
       { key: "requester", label: t("dailyReport.table.reportedBy"), width: "w-24" },
@@ -154,13 +191,13 @@ export default function DailyReportsPage() {
     
     // Department, date and zone on same line
     doc.setFontSize(9);
-    doc.text(`Dept: ${department}`, margin, 50);
-    doc.text(`Date: ${format(new Date(date), "dd/MM/yyyy")}`, margin + 200, 50);
-    
+    doc.text(`${t("dailyReport.printHeader.department")}: ${department}`, margin, 50);
+    doc.text(`${t("dailyReport.printHeader.date")}: ${format(new Date(date), "dd/MM/yyyy")}`, margin + 200, 50);
+
     // Zone box (smaller)
     doc.rect(pageWidth - margin - 60, 42, 60, 18);
     doc.setFont("helvetica", "bold");
-    doc.text(zone, pageWidth - margin - 30, 53, { align: "center" });
+    doc.text(`${t("dailyReport.printHeader.zone")}: ${zone}`, pageWidth - margin - 30, 53, { align: "center" });
 
     // Table headers
     const tableHeaders = [
@@ -226,7 +263,7 @@ export default function DailyReportsPage() {
           doc.text(`${t("dailyReport.printHeader.title")} (Continued)`, margin, 25);
           doc.setFont("helvetica", "normal");
           doc.setFontSize(9);
-          doc.text(`Date: ${format(new Date(date), "dd/MM/yyyy")}`, margin, 38);
+          doc.text(`${t("dailyReport.printHeader.date")}: ${format(new Date(date), "dd/MM/yyyy")}`, margin, 38);
           doc.text(`Page ${pageNumber}`, pageWidth - margin - 40, 38);
         }
         
@@ -355,14 +392,14 @@ export default function DailyReportsPage() {
           <table className="w-full border-collapse text-xs print:text-[10px]">
             <thead>
               <tr className="bg-gray-100 print:bg-gray-200">
-                <th className="border-2 border-black p-2 text-left font-bold">No.</th>
-                <th className="border-2 border-black p-2 text-left font-bold">Report ID</th>
-                <th className="border-2 border-black p-2 text-left font-bold">Assigned Date/Time</th>
-                <th className="border-2 border-black p-2 text-left font-bold">Description</th>
-                <th className="border-2 border-black p-2 text-left font-bold">Location</th>
-                <th className="border-2 border-black p-2 text-left font-bold">Reported By</th>
-                <th className="border-2 border-black p-2 text-left font-bold">Assigned To</th>
-                <th className="border-2 border-black p-2 text-center font-bold" colSpan={3}>Result Status</th>
+                <th className="border-2 border-black p-2 text-left font-bold">{t("dailyReport.table.no")}</th>
+                <th className="border-2 border-black p-2 text-left font-bold">{t("dailyReport.table.reportId")}</th>
+                <th className="border-2 border-black p-2 text-left font-bold">{t("dailyReport.table.assignedDateTime")}</th>
+                <th className="border-2 border-black p-2 text-left font-bold">{t("dailyReport.table.description")}</th>
+                <th className="border-2 border-black p-2 text-left font-bold">{t("dailyReport.table.location")}</th>
+                <th className="border-2 border-black p-2 text-left font-bold">{t("dailyReport.table.reportedBy")}</th>
+                <th className="border-2 border-black p-2 text-left font-bold">{t("dailyReport.table.assignedTo")}</th>
+                <th className="border-2 border-black p-2 text-center font-bold" colSpan={3}>{t("dailyReport.table.resultStatus")}</th>
               </tr>
               <tr className="bg-gray-100 print:bg-gray-200">
                 <th className="border-2 border-black" colSpan={7}></th>
@@ -373,9 +410,12 @@ export default function DailyReportsPage() {
             </thead>
             <tbody>
               {rows.map((r, idx) => (
-                <tr key={idx} className={idx % 2 ? "bg-white" : "bg-gray-50 print:bg-white"}>
+                <tr key={idx} className={`${idx % 2 ? "bg-white" : "bg-gray-50 print:bg-white"} ${r.isCarryOver ? "bg-yellow-50 print:bg-yellow-50" : ""}`}>
                   <td className="border border-black p-1.5 text-center">{r.no}</td>
-                  <td className="border border-black p-1.5 text-center">{r.thaiReportId}</td>
+                  <td className="border border-black p-1.5 text-center">
+                    {r.thaiReportId}
+                    {r.isCarryOver && <span className="text-xs text-orange-600 ml-1 print:hidden">*</span>}
+                  </td>
                   <td className="border border-black p-1.5">{r.reportedTime}</td>
                   <td className="border border-black p-1.5">{r.problem}</td>
                   <td className="border border-black p-1.5">{r.location}</td>
@@ -413,6 +453,11 @@ export default function DailyReportsPage() {
             </tbody>
           </table>
           )}
+          {rows.some(r => r.isCarryOver) && (
+            <div className="mt-4 text-xs text-gray-600 print:text-black">
+              <span className="font-semibold">{t("dailyReport.note")}:</span> {t("dailyReport.carryOverNote")}
+            </div>
+          )}
         </div>
       )}
 
@@ -420,9 +465,9 @@ export default function DailyReportsPage() {
       <div className="hidden print:block print:fixed print:bottom-0 print:left-0 print:right-0 print:bg-white print:z-50">
         <div className="border-t border-black px-4 py-2">
           <div className="flex justify-between items-center text-[9px]">
-            <span>Prepared by: ______________</span>
-            <span>Reviewed by: ______________</span>
-            <span>Approved by: ______________</span>
+            <span>{t("dailyReport.footer.preparedBy")}: ______________</span>
+            <span>{t("dailyReport.footer.reviewedBy")}: ______________</span>
+            <span>{t("dailyReport.footer.approvedBy")}: ______________</span>
           </div>
         </div>
       </div>

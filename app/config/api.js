@@ -17,7 +17,7 @@ const config = {
   ENVIRONMENT: {
     // Set this to switch between different backend URLs
     // Options: 'CONTAINER', 'LOCAL', 'CONTAINER_ALT'
-    CURRENT: 'CONTAINER'  // Using Azure container backend for production testing
+    CURRENT: 'LOCAL'  // Using Azure container backend for production testing
   }
 };
 

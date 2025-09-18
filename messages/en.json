@@ -560,15 +560,20 @@
       "rf": "RF"
     },
     "footer": {
-      "preparedBy": "Prepared by: __________",
-      "reviewedBy": "Reviewed by: __________",
-      "approvedBy": "Approved by: __________",
+      "preparedBy": "Prepared by",
+      "reviewedBy": "Reviewed by",
+      "approvedBy": "Approved by",
       "page": "Page {current} of {total}",
       "division": "Operations and Maintenance Division",
       "head": "Head of Operations and Maintenance Division",
       "formCode": "Form Code: FM-OM-AS-12",
       "revision": "Revision: 1"
-    }
+    },
+    "department": "Maintenance Department",
+    "zone": "Zone 01",
+    "noteCarryOver": "Note: Yellow highlighted rows are RF/PR reports from previous days that need follow-up.",
+    "note": "Note",
+    "carryOverNote": "Yellow highlighted rows are RF/PR reports from previous days that need follow-up."
   },
   "assignedReports": {
     "title": "Assigned Reports",

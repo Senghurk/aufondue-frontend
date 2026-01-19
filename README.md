@@ -1,5 +1,5 @@
 # AU Fondue
-## Senior Project 1
+## Senior Project 1/2
 ## About Project 
 AU Fondue is a streamlined maintenance management system for Assumption University. This website is for the admin side to manage the reports, set priorities and send updates about the status of the reports.
  
